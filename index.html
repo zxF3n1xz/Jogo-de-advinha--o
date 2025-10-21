@@ -1,0 +1,43 @@
+<!--
+Estrutura HTML:
+
+Crie um arquivo HTML com a seguinte estrutura:
+
+Um título para o jogo (ex: "Jogo de Adivinhação").
+
+Uma mensagem inicial explicando como o jogo funciona.
+
+Um campo de input para o jogador inserir seu palpite.
+
+Um botão com o texto "Chutar".
+
+Uma tag <p> para exibir as mensagens do jogo (dicas, resultado, etc.).
+
+Uma tag <p> para exibir o número de tentativas restantes.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+        <h1>Jogo de Adivinhação</h1>
+        <p>Neste jogo, o jogador deve escolher um número de 1 a 100, e através das dicas, deve acertar em 10 tentativas o número aleatório escolhido.</p>       
+        </header>
+        <nav>
+            <input id="numero" type="number" placeholder="Digite o número escolhido" />
+            <button type="button" onclick="chutar()">Chutar</button>
+            <section>
+                <p id="tentativas">Tentativas restantes: 10 </p>       
+            </section>   
+        </nav>
+    </main> 
+</body>       
+</html>
