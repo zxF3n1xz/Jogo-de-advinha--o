@@ -1,9 +1,4 @@
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
+/* ================= Reset e Configurações Globais ================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +6,13 @@ input[type=number]::-webkit-outer-spin-button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ================= Body ================= */
 body {
     display: flex;
     justify-content: center;
@@ -18,53 +20,86 @@ body {
     height: 100vh;
     background-color: #fafafa;
 }
-main{
+
+/* ================= Main Container ================= */
+main {
     background-color: #ffffff;
-    border: 2px solid #58e6ff; 
+    border: 2px solid #58e6ff;
     border-radius: 10px;
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-}
-header{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     padding: 20px;
 }
-h1{
+
+/* ================= Header ================= */
+header {
+    padding-bottom: 10px;
+}
+
+h1 {
     padding-bottom: 7px;
 }
-nav{
+
+/* ================= Navegação ================= */
+nav {
     padding-bottom: 10px;
-    
 }
-input{
-    
+
+/* ================= Inputs ================= */
+input {
     background-color: azure;
-    height: 28px;
-    width: 147px;
+    height: 32px;
+    width: 80%;
+    max-width: 150px;
     padding: 5px;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     border: 1px solid #3498db;
     border-radius: 5px;
     font-size: 14px;
     text-align: center;
 }
-button{
+
+/* ================= Botões ================= */
+button {
     font-weight: bold;
-    height: 28px;
-    width: 50px;
+    height: 32px;
+    width: 60px;
     border: 2px solid #3498db;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(172, 172, 172);
 }
-section{
+
+/* ================= Section ================= */
+section {
     background-color: #8bd1ff;
-    width: 200px;
-    margin: 7px 150px;
-    
+    width: 80%;
+    max-width: 200px;
+    margin: 10px auto;
     border-radius: 5px;
-    border:2px solid rgba(8, 73, 194, 0.5);
+    border: 2px solid rgba(8, 73, 194, 0.5);
     text-align: left;
-    padding-left:5px ;
+    padding: 5px;
+}
+
+/* ================= Responsividade ================= */
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    input, section {
+        width: 100%;
+        max-width: none;
+    }
+
+    button {
+        width: 100%;
+    }
 }
